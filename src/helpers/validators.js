@@ -38,13 +38,6 @@ const isNotWhite = complement(isWhite);
 
 const isNotRed = complement(isRed);
 
-const isNotOrange = complement(isOrange);
-
-const isNotGreen = complement(isGreen);
-
-const isNotBlue = complement(isBlue);
-
-const omitTriangle = omit(['triangle']);
 
 const omitStar = omit(['star']);
 
@@ -56,23 +49,20 @@ const isAllWhite = all(isWhite);
 
 const isAllNotWhite = all(isNotWhite);
 
-const isAllRed = all(isRed);
 
 const isAllOrange = all(isOrange);
 
 const isAllGreen = all(isGreen);
 
-const isAllBlue = all(isBlue);
+
 
 const isAllColorsWhite = compose(isAllWhite, values);
 
-const isAllColorsRed = compose(isAllRed, values);
 
 const isAllColorsOrange = compose(isAllOrange, values);
 
 const isAllColorsGreen = compose(isAllGreen, values);
 
-const isAllColorsBlue = compose(isAllBlue, values);
 
 const isAllColorsNotWhite = compose(isAllNotWhite, values)
 
@@ -92,11 +82,10 @@ const greenShapeCount = compose(count(isGreen), values);
 
 const redShapeCount = compose(count(isRed), values);
 
-const orangeShapeCount = compose(count(isOrange), values);
+
 
 const blueShapeCount = compose(count(isBlue), values);
 
-const whiteShapeCount = compose(count(isWhite), values);
 
 // 1. Красная звезда, зеленый квадрат, все остальные белые.
 export const validateFieldN1 = (shapes) => {
