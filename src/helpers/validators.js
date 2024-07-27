@@ -84,7 +84,9 @@ const countByValue = arr => countBy(identity, arr);
 
 const isNotEmpty = compose(not, isEmpty);
 
-const hasNonWhiteKeyWithValue3 = compose(isNotEmpty, filter(([key, value]) => key !== 'white' && value === 3), toPairs) 
+const filterNonWhiteWithValue3 = ([key, value]) => key !== 'white' && value === 3;
+
+const hasNonWhiteKeyWithValue3 = compose(isNotEmpty, filter(filterNonWhiteWithValue3), toPairs) 
 
 const greenShapeCount = compose(count(isGreen), values);
 
